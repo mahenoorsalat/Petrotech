@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Readex+Pro:wght@200..700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+        @apply bg-white text-text-main font-readex overflow-x-hidden;
+    }
+}
+
+@layer components {
+    .btn-primary {
+        @apply bg-primary text-white font-bold px-8 py-3 rounded-full hover:bg-secondary transition-all duration-300 shadow-lg hover:shadow-primary/40 hover:-translate-y-1 uppercase tracking-wide text-sm relative overflow-hidden;
+    }
+
+    .btn-outline {
+        @apply border-2 border-primary text-primary font-bold px-8 py-3 rounded-full hover:bg-primary hover:text-white transition-all duration-300 uppercase tracking-wide text-sm;
+    }
+
+    .section-title {
+        @apply text-3xl md:text-5xl font-bold text-dark mb-6 text-center leading-tight;
+    }
+
+    .section-subtitle {
+        @apply text-text-muted text-center max-w-3xl mx-auto mb-16 text-lg;
+    }
+
+    /* Glass Effect */
+    .glass-nav {
+        @apply bg-white/80 backdrop-blur-md border-b border-gray-100;
+    }
+
+    /* Animation Utilities */
+    .reveal {
+        @apply opacity-0 translate-y-8 transition-all duration-1000 ease-out;
+    }
+
+    .reveal.active {
+        @apply opacity-100 translate-y-0;
+    }
+
+    /* Hover Cards */
+    .hover-card {
+        @apply transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl;
+    }
+}
